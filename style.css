@@ -1,1 +1,285 @@
-/* Add you CSS here */
+/* General styles */
+body {
+  font-family: 'Georgia', serif; /* Use a more elegant font */
+  margin: 0;
+  padding: 0;
+  background-color: #C2C5AA; /* Light earthy background */
+  color: #333D29; /* Dark text color */
+}
+
+/* Navigation Bar */
+#navbar {
+  background-color: #414833; /* Dark green background */
+  color: #C2C5AA; /* Light text color */
+  padding: 10px 20px; /* Add padding around the navbar */
+  position: sticky; /* Make the navbar stick to the top */
+  top: 0; /* Position it at the top of the page */
+  z-index: 1000; /* Ensure it stays above other content */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the navigation links */
+}
+
+#navbar ul {
+  list-style: none; /* Remove default list styling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Arrange items in a row */
+  gap: 20px; /* Add space between links */
+}
+
+#navbar li {
+  display: inline; /* Ensure list items are inline */
+}
+
+#navbar a {
+  text-decoration: none; /* Remove underline from links */
+  color: #C2C5AA; /* Light text color */
+  font-size: 1.1em; /* Slightly larger font size */
+  padding: 5px 10px; /* Add padding around links */
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#navbar a:hover {
+  background-color: #656D4A; /* Change background on hover */
+  color: #FFFFFF; /* Change text color on hover */
+}
+
+/* Responsive Navbar */
+@media (max-width: 600px) {
+  #navbar ul {
+    flex-direction: column; /* Stack links vertically on small screens */
+    gap: 10px; /* Reduce gap between links */
+  }
+}
+
+/* Hero Section */
+#hero {
+  background-image: url('img/background.jpg'); /* Add background image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  color: #FFFFFF; /* Change text color to white for better contrast */
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Georgia', serif; /* Elegant font for hero section */
+  position: relative; /* Enable positioning for child elements */
+}
+
+#hero .headshot {
+  width: 180px; /* Increase the width */
+  height: 180px; /* Increase the height to match the width */
+  border-radius: 50%; /* Make the image circular */
+  border: 5px dashed #414833; /* Outer dashed border */
+  padding: 5px; /* Space for the inner border */
+  box-shadow: inset 0 0 0 5px #414833; /* Inner solid border */
+  display: block; /* Center the image */
+  margin: 0 auto 20px; /* Center horizontally and add spacing below */
+  object-fit: cover; /* Ensure the image fills the circular area */
+  transform: scale(1.1); /* Slightly zoom into the image */
+}
+
+#hero h1 {
+  font-size: 3em; /* Larger font size for the main header */
+  text-transform: uppercase; /* Make the text uppercase for emphasis */
+  margin-bottom: 10px; /* Add spacing below the header */
+  text-shadow: 2px 2px 4px #414833; /* Add a subtle dark green shadow */
+}
+
+#hero p {
+  font-size: 1.2em; /* Slightly larger font for the paragraph */
+}
+
+/* About Section */
+#about {
+  background-color: #B6AD90; /* Beige background */
+  color: #414833; /* Darker earthy green */
+  padding: 30px 20px;
+}
+
+#about h2, #skills h2 {
+  text-align: center; /* Center the headers */
+  font-size: 2em; /* Increase header size */
+  text-decoration: underline; /* Add underline for styling */
+  margin-bottom: 15px; /* Add spacing below the header */
+  text-shadow: 2px 2px 4px #414833; /* Add a subtle dark green shadow */
+}
+
+#about p {
+  font-size: 1.1em; /* Slightly larger font for readability */
+  line-height: 1.6; /* Add line height for better spacing */
+}
+
+/* Skills Section */
+#skills {
+  background-color: #A68A64; /* Earthy brown background */
+  color: #414833; /* Darker earthy green */
+  padding: 30px 20px;
+  text-align: center; /* Center the section content */
+}
+
+.skills-container {
+  display: flex; /* Arrange the cards in a row */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Add space between the cards */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.skill-card {
+  background-color: #B6AD90; /* Beige background for the cards */
+  color: #414833; /* Darker text color */
+  border: 2px solid #414833; /* Add a border to the cards */
+  border-radius: 10px; /* Slightly rounded corners */
+  padding: 20px; /* Add padding inside the cards */
+  width: 200px; /* Set a fixed width for the cards */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  text-align: center; /* Center the text inside the cards */
+}
+
+.skill-card h3 {
+  font-size: 1.5em; /* Make the card titles larger */
+  margin-bottom: 10px; /* Add spacing below the title */
+}
+
+.skill-card p {
+  font-size: 1em; /* Standard font size for the description */
+  line-height: 1.5; /* Add line height for better readability */
+}
+
+.skill-card i {
+  font-size: 60px; /* Large icon size */
+  color: #414833; /* Dark green color */
+  margin-bottom: 10px; /* Spacing below the icon */
+  display: block; /* Center the icon */
+}
+
+/* Projects Section */
+#projects {
+  background-color: #B6AD90; /* Beige background */
+  color: #414833; /* Darker earthy green */
+  padding: 30px 20px; /* Add padding around the section */
+  text-align: center; /* Center the section content */
+}
+
+#projects h2 {
+  font-size: 2em; /* Match header size with other sections */
+  text-decoration: underline; /* Underline for styling */
+  margin-bottom: 15px; /* Add spacing below the header */
+  text-shadow: 2px 2px 4px #414833; /* Subtle shadow for the header */
+}
+
+#projects p {
+  font-size: 1.1em; /* Slightly larger font for readability */
+  line-height: 1.6; /* Add line height for better spacing */
+  margin-bottom: 20px; /* Add spacing below the paragraph */
+}
+
+.projects-container {
+  display: flex; /* Arrange project cards in a row */
+  justify-content: center; /* Center the project cards horizontally */
+  gap: 20px; /* Add space between the project cards */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.project-card {
+  background-color: #A68A64; /* Earthy brown background for project cards */
+  color: #C2C5AA; /* Light text color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Add padding inside the project card */
+  width: 200px; /* Set a fixed width for the project card */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: center; /* Center the text inside the project card */
+}
+
+.project-card h3 {
+  font-size: 1.5em; /* Larger font size for project titles */
+  margin-bottom: 10px; /* Add spacing below the title */
+}
+
+.project-card p {
+  font-size: 1em; /* Standard font size for descriptions */
+  line-height: 1.5; /* Add line height for better readability */
+}
+
+/* Photography Section */
+#photography {
+  background-color: #A68A64; /* Earthy brown background */
+  color: #C2C5AA; /* Light text color */
+  padding: 30px 20px; /* Add padding around the section */
+  text-align: center; /* Center the section content */
+}
+
+#photography h2 {
+  font-size: 2em; /* Match header size with other sections */
+  text-decoration: underline; /* Underline for styling */
+  margin-bottom: 15px; /* Add spacing below the header */
+  text-shadow: 2px 2px 4px #414833; /* Subtle shadow for the header */
+}
+
+.carousel {
+  position: relative; /* Enable positioning for buttons */
+  display: flex; /* Arrange images and buttons in a row */
+  align-items: center; /* Center the images and buttons vertically */
+  justify-content: center; /* Center the carousel horizontally */
+  overflow: hidden; /* Hide images outside the visible area */
+  width: 80%; /* Set a responsive width for the carousel */
+  margin: 0 auto; /* Center the carousel on the page */
+}
+
+.carousel-images {
+  display: flex; /* Arrange images in a row */
+  overflow: hidden; /* Hide images outside the visible area */
+  width: 100%; /* Make the carousel take full width of its container */
+  max-width: 800px; /* Set a maximum width for the carousel */
+  margin: 0 auto; /* Center the carousel horizontally */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+}
+
+.carousel-image {
+  min-width: 100%; /* Ensure each image takes up the full width of the visible area */
+  height: auto; /* Maintain the aspect ratio of the images */
+  object-fit: cover; /* Ensure images fill the space without distortion */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.carousel-btn {
+  position: absolute; /* Position buttons over the carousel */
+  top: 50%; /* Center buttons vertically */
+  transform: translateY(-50%); /* Adjust for proper centering */
+  background-color: #414833; /* Dark green background */
+  color: #C2C5AA; /* Light text color */
+  border: none; /* Remove default border */
+  border-radius: 50%; /* Circular buttons */
+  width: 40px; /* Set button size */
+  height: 40px; /* Set button size */
+  font-size: 1.5em; /* Larger font size for arrows */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  display: flex; /* Center the arrow inside the button */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.carousel-btn:hover {
+  background-color: #656D4A; /* Lighter green on hover */
+}
+
+.carousel-btn.prev-btn {
+  left: 10px; /* Position the previous button on the left */
+}
+
+.carousel-btn.next-btn {
+  right: 10px; /* Position the next button on the right */
+}
+
+/* Footer */
+footer {
+  background-color: #936639; /* Dark earthy brown */
+  color: #C2C5AA; /* Light text color */
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Georgia', serif; /* Match the elegant font */
+  font-size: 0.9em; /* Slightly smaller font for footer text */
+}
+
