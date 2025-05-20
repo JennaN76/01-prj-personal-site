@@ -94,6 +94,7 @@ body {
   background-color: #B6AD90; /* Beige background */
   color: #414833; /* Darker earthy green */
   padding: 30px 20px;
+  text-align: center; /* Center the about me text */
 }
 
 #about h2, #skills h2 {
@@ -133,6 +134,18 @@ body {
   width: 200px; /* Set a fixed width for the cards */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
   text-align: center; /* Center the text inside the cards */
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease, 
+    background-color 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect for skill cards */
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05); /* Lift and slightly enlarge the card */
+  box-shadow: 4px 8px 20px rgba(65, 72, 51, 0.25); /* Stronger shadow */
+  background-color: #A4AC86; /* Slightly different background on hover */
+  cursor: pointer; /* Show pointer cursor */
 }
 
 .skill-card h3 {
@@ -216,30 +229,33 @@ body {
 }
 
 .carousel {
-  position: relative; /* Enable positioning for buttons */
-  display: flex; /* Arrange images and buttons in a row */
-  align-items: center; /* Center the images and buttons vertically */
-  justify-content: center; /* Center the carousel horizontally */
-  overflow: hidden; /* Hide images outside the visible area */
-  width: 80%; /* Set a responsive width for the carousel */
-  margin: 0 auto; /* Center the carousel on the page */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #B6AD90; /* Add a background to help images stand out */
+  border-radius: 10px; /* Match card style */
+  box-shadow: 2px 2px 8px rgba(65, 72, 51, 0.15); /* Soft shadow */
 }
 
 .carousel-images {
-  display: flex; /* Arrange images in a row */
-  overflow: hidden; /* Hide images outside the visible area */
-  width: 100%; /* Make the carousel take full width of its container */
-  max-width: 800px; /* Set a maximum width for the carousel */
-  margin: 0 auto; /* Center the carousel horizontally */
-  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-image {
-  min-width: 100%; /* Ensure each image takes up the full width of the visible area */
-  height: auto; /* Maintain the aspect ratio of the images */
-  object-fit: cover; /* Ensure images fill the space without distortion */
-  border-radius: 10px; /* Add rounded corners */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 100%; /* Make image fill the carousel width */
+  height: 250px; /* Fixed height for all images */
+  object-fit: cover; /* Crop and fill the area without distortion */
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background: #C2C5AA; /* Fallback background if image fails to load */
+  flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 .carousel-btn {
@@ -271,6 +287,43 @@ body {
 
 .carousel-btn.next-btn {
   right: 10px; /* Position the next button on the right */
+}
+
+/* Contact Section */
+#contact {
+  background-color: #B6AD90; /* Beige background like about section */
+  color: #414833; /* Darker earthy green */
+  padding: 30px 20px;
+  text-align: center; /* Center the contact section text */
+}
+
+#contact h2 {
+  font-size: 2em; /* Match header size with about section */
+  text-decoration: underline; /* Underline for styling */
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px #414833; /* Subtle shadow for the header */
+}
+
+#contact p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-icons {
+  margin-top: 10px;
+}
+
+.contact-icons a {
+  color: #414833; /* Icon color */
+  font-size: 2.5em; /* Make icons large */
+  margin: 0 15px; /* Space between icons */
+  transition: color 0.3s;
+  vertical-align: middle;
+}
+
+.contact-icons a:hover {
+  color: #656D4A; /* Change color on hover */
 }
 
 /* Footer */
