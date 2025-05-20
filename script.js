@@ -22,4 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const offset = -currentIndex * 100; // Calculate the offset for the current image
     carouselImages.style.transform = `translateX(${offset}%)`;
   }
+
+  // Navbar toggle for mobile
+  const navToggle = document.getElementById("nav-toggle");
+  const navList = document.querySelector("#navbar ul");
+  if (navToggle && navList) {
+    navToggle.addEventListener("click", () => {
+      navList.classList.toggle("open");
+    });
+  }
 });
